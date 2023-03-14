@@ -1,0 +1,42 @@
+using System;
+
+public class Kalkulator
+{
+    public static void Main()
+    {
+        Console.WriteLine("Wybierz działanie: ");
+        Console.WriteLine("1. Dodawanie");
+        Console.WriteLine("2. Odejmowanie");
+        Console.WriteLine("3. Mnożenie");
+        Console.WriteLine("4. Dzielenie");
+
+        int wybor = int.Parse(Console.ReadLine());
+
+        if (wybor < 1 || wybor > 4)
+        {
+            Console.WriteLine("Nieprawidłowy wybór!");
+            return;
+        }
+
+        Console.WriteLine("Podaj pierwszą liczbę: ");
+        double a = double.Parse(Console.ReadLine());
+        Console.WriteLine("Podaj drugą liczbę: ");
+        double b = double.Parse(Console.ReadLine());
+
+        switch (wybor)
+        {
+            case 1:
+                Console.WriteLine(a + b);
+                break;
+            case 2:
+                Console.WriteLine(a - b);
+                break;
+            case 3:
+                Console.WriteLine(a * b);
+                break;
+            case 4:
+                Console.WriteLine(a/b);
+                break;
+        }
+    }
+}
